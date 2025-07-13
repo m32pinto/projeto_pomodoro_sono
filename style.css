@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(248, 196, 255); /* Um roxo claro */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão para todo o corpo */
+    display: flex; /* Usado para centralizar o conteúdo principal verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    margin: 0; /* Remove margem padrão do body */
+}
+
+header {
+    background-color: rgb(155, 89, 182); /* Um roxo mais escuro para o cabeçalho */
+    padding: 15px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif; /* Adicionado fallback para caso a fonte não exista */
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0; /* Remove margem superior padrão */
+    margin-bottom: 10px;
+}
+
+/* Adicionado text-align: center para parágrafos que não são do rodapé */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center; /* <-- Adicionado ou corrigido aqui */
+    margin: 5px 0; /* Margem menor para parágrafos */
+}
+
+/* Estilos para o container do timer */
+main {
+    flex-grow: 1; /* Faz com que o main ocupe o espaço restante */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column;
+}
+
+.timer-container {
+    background-color: rgb(130, 71, 155); /* Um roxo intermediário */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* O ID é '#timer-display', não a classe '.timer-display' no HTML que te passei antes.
+   Se você usou id="timer-display" no HTML, o seletor CSS correto é #timer-display. */
+#timer-display { /* <-- Corrigido para ID, se o HTML usa ID */
+    font-size: 4em; /* Tamanho grande para o tempo */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* O seletor correto para estilizar OS BOTÕES é .controls button (se os botões estão dentro de uma div com class="controls")
+   Ou, se você usar a classe "controls-button" em CADA botão, use .controls-button */
+.controls button { /* <-- Seletor correto para os botões dentro da div com class="controls" */
+    background-color: rgb(99, 57, 118); /* Roxo mais escuro para botões */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Corrigido o seletor para o hover dos botões */
+.controls button:hover { /* <-- Seletor corrigido */
+    background-color: rgb(75, 43, 89); /* Efeito hover */
+}
+
+/* Este seletor '.controls-button' não será usado se você não o aplicou aos botões no HTML.
+   Se você QUISER usar a classe controles-button, então seu HTML dos botões deveria ser:
+   <button class="controls-button" id="start-btn">Iniciar</button>
+   <button class="controls-button" id="pause-btn">Pausar</button>
+   <button class="controls-button" id="reset-btn">Resetar</button>
+   E aí você usaria esse seletor e removeria o '.controls button' acima.
+   Por enquanto, mantive o '.controls button' que se encaixa melhor no HTML sugerido.
+*/
+
+
+.cycle-info p {
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.cycle-info span {
+    font-weight: bold;
+}
+
+footer {
+    /* Posicionamento fixo no canto inferior direito */
+    position: fixed; /* Fixa o elemento em relação à janela do navegador */
+    bottom: 10px;    /* 10 pixels da parte inferior */
+    right: 10px;     /* 10 pixels da direita */
+
+    background-color: rgba(155, 89, 182, 0.8); /* Um roxo mais escuro com transparência */
+    color: #ffffff;
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    z-index: 1000; /* Garante que o rodapé fique acima de outros elementos */
+    font-size: 0.9em; /* Texto um pouco menor para o rodapé fixo */
+    text-align: right; /* Alinha o texto do rodapé à direita, dentro dele */
+}
+
+/* Para garantir que o texto do rodapé não fique muito longo e quebre bem */
+footer p {
+    margin: 0; /* Remove margem padrão dos parágrafos dentro do footer */
+    text-align: right; /* Garante alinhamento à direita para cada parágrafo do footer */
+}
