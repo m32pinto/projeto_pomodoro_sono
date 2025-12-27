@@ -120,19 +120,17 @@ footer p {
 }
 
 #botao_voltar_para_portfolio {
-  width: 300px;
-  height: 50px;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: auto;
+  height: auto;
   background-color: #1db768;
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
-  left: 50%;
-  margin-right: -50px;
-  margin-top: 40%;
-  bottom: 20px;
-  right: 20px;
-  transform: translate(90%, 55%);
+  z-index: 1000; /* Garante que apareça por cima de tudo */
 }
