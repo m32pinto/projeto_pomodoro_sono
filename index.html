@@ -13,6 +13,24 @@
         <h1>Pomodoro Sono</h1>
     </header>
 
+
+    <button id="botao_voltar_para_portfolio" button type="button" class="btn btn-primary btn-sm">Ir para portfólio</button href="https://m32pinto.github.io/portfoliodomarcos/">
+
+<script>
+document.getElementById('botao_voltar_para_portfolio').addEventListener('click', function() {
+  window.location.href = 'https://m32pinto.github.io/portfoliodomarcos/#travel';
+});
+</script>
+
+<script>
+document.getElementById('botao_voltar_para_portfolio').addEventListener('click', function() {
+  const target = document.getElementById('#travel');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+</script>
+
     <main>
         <p>Concentração no interior</p>
         <p>Descrição: apenas com prática e organização do tempo podemos chegar nas grandes ilusões projetadas pela mente.</p>
